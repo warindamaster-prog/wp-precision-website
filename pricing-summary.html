@@ -1,0 +1,931 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pricing Summary | WP Precision Systems Ltd.</title>
+  <meta name="description" content="Printable WP Precision Systems price list for calibration tracking software, managed compliance bundles and engineering services.">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    :root {
+      --navy: #1e3a5f;
+      --navy-dark: #001331;
+      --steel: #455a64;
+      --muted: #546e7a;
+      --line: #dde6ef;
+      --ice: #edf3fa;
+      --ice2: #f5f8fc;
+      --gold: #bf8f00;
+      --gold-bg: #fffbf0;
+      --green: #2e7d32;
+      --green-light: #e8f5e9;
+      --purple: #6b3d9f;
+      --purple-light: #f3eef9;
+      --white: #ffffff;
+      --text: #1a2733;
+    }
+    html, body {
+      margin: 0;
+      color: var(--text);
+      background: #e8eef5;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 13px;
+      line-height: 1.45;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    a { color: inherit; text-decoration: none; }
+    .screen-actions {
+      width: min(794px, calc(100% - 32px));
+      margin: 18px auto 0;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .screen-actions a,
+    .screen-actions button {
+      min-height: 42px;
+      padding: 0 16px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      color: var(--navy-dark);
+      background: var(--white);
+      font: inherit;
+      font-weight: 800;
+      cursor: pointer;
+    }
+    .screen-actions button {
+      color: var(--white);
+      background: var(--navy);
+      border-color: var(--navy);
+    }
+    .page {
+      width: 794px;
+      height: 1123px;
+      margin: 24px auto;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      background: var(--white);
+      box-shadow: 0 4px 32px rgba(0,0,0,0.12);
+    }
+    .doc-header {
+      height: 88px;
+      padding: 0 36px 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      flex-shrink: 0;
+      color: var(--white);
+      background: var(--navy-dark);
+      border-bottom: 3px solid var(--gold);
+    }
+    .doc-logo {
+      height: 76px;
+      width: auto;
+      max-width: 500px;
+      display: block;
+      object-fit: contain;
+    }
+    .header-right { text-align: right; white-space: nowrap; }
+    .tagline {
+      color: rgba(255,255,255,0.92);
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .web {
+      margin-top: 4px;
+      color: rgba(255,255,255,0.58);
+      font-size: 11px;
+      letter-spacing: 0.04em;
+    }
+    .body {
+      flex: 1;
+      padding: 18px 36px 14px;
+      display: flex;
+      flex-direction: column;
+    }
+    .section-label {
+      margin: 0 0 12px;
+      padding-left: 10px;
+      color: var(--navy);
+      border-left: 3px solid var(--navy);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .section-label.purple {
+      color: var(--purple);
+      border-color: var(--purple);
+    }
+    .intro-row,
+    .two-col,
+    .pkg-grid {
+      display: grid;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .intro-row { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .two-col,
+    .pkg-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .intro-card {
+      padding: 10px 14px;
+      border: 1px solid var(--line);
+      border-top: 3px solid var(--navy);
+      border-radius: 6px;
+      background: var(--ice2);
+    }
+    .intro-card.consulting { border-top-color: var(--purple); }
+    .intro-card.process { border-top-color: var(--gold); }
+    .intro-title {
+      margin-bottom: 4px;
+      color: var(--navy);
+      font-size: 13px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .intro-card.consulting .intro-title { color: var(--purple); }
+    .intro-card.process .intro-title { color: var(--gold); }
+    .intro-desc { color: var(--muted); font-size: 12px; }
+    .bundles-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    .bundle-card {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--white);
+    }
+    .bundle-card.featured {
+      border: 2px solid var(--gold);
+      box-shadow: 0 2px 16px rgba(191,143,0,0.18);
+    }
+    .bundle-head {
+      padding: 10px 12px;
+      color: var(--white);
+      background: var(--navy);
+    }
+    .bundle-card.featured .bundle-head {
+      color: var(--navy-dark);
+      background: var(--gold);
+    }
+    .bundle-name {
+      font-size: 18px;
+      font-weight: 900;
+      letter-spacing: 0.03em;
+    }
+    .bundle-tag {
+      margin-top: 1px;
+      color: rgba(255,255,255,0.72);
+      font-size: 10.5px;
+    }
+    .bundle-card.featured .bundle-tag { color: rgba(15,32,53,0.72); }
+    .bundle-price-row {
+      padding: 10px 12px 8px;
+      border-bottom: 1px solid var(--line);
+      background: var(--ice2);
+    }
+    .bundle-card.featured .bundle-price-row { background: var(--gold-bg); }
+    .bundle-price {
+      color: var(--navy);
+      font-size: 29px;
+      line-height: 1;
+      font-weight: 900;
+    }
+    .bundle-price small {
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .bundle-card.featured .bundle-price { color: var(--gold); }
+    .bundle-saving {
+      display: inline-block;
+      margin-top: 4px;
+      padding: 2px 6px;
+      border-radius: 3px;
+      color: var(--green);
+      background: var(--green-light);
+      font-size: 10px;
+      font-weight: 800;
+    }
+    .bundle-body {
+      flex: 1;
+      padding: 8px 12px 10px;
+    }
+    .bundle-includes {
+      margin-bottom: 5px;
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .bundle-item {
+      position: relative;
+      padding: 1.5px 0 1.5px 10px;
+      color: var(--steel);
+      font-size: 10.5px;
+      line-height: 1.35;
+    }
+    .bundle-item::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 7px;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: #9daab8;
+    }
+    .bundle-card.featured .bundle-item::before { background: var(--gold); }
+    .bundle-bonus {
+      margin-top: 8px;
+      padding: 6px 8px;
+      border-radius: 4px;
+      color: var(--green);
+      background: var(--green-light);
+    }
+    .bundle-bonus-label {
+      margin-bottom: 2px;
+      font-size: 9px;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .bundle-bonus-item { font-size: 10.5px; font-weight: 700; }
+    .bundle-best {
+      margin-top: 6px;
+      padding-top: 5px;
+      border-top: 1px dashed var(--line);
+      color: var(--muted);
+      font-size: 9.5px;
+      font-style: italic;
+      line-height: 1.3;
+    }
+    .annual-note {
+      margin-bottom: 12px;
+      padding: 7px 12px;
+      border-left: 3px solid #2e5f9a;
+      border-radius: 0 4px 4px 0;
+      color: var(--navy);
+      background: var(--ice);
+      font-size: 11px;
+    }
+    .tier-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 11px;
+    }
+    .tier-table th {
+      padding: 6px 9px;
+      color: var(--white);
+      background: var(--navy);
+      text-align: left;
+      font-size: 11px;
+      letter-spacing: 0.03em;
+    }
+    .tier-table th:last-child,
+    .tier-table td:last-child { text-align: right; }
+    .tier-table td {
+      padding: 5px 9px;
+      border-bottom: 1px solid var(--line);
+      color: var(--steel);
+      vertical-align: middle;
+    }
+    .tier-table td:last-child {
+      color: var(--navy);
+      font-weight: 800;
+    }
+    .tier-table tr:nth-child(even) td { background: var(--ice2); }
+    .tier-highlight td { background: var(--gold-bg) !important; }
+    .tier-highlight td:last-child { color: var(--gold) !important; }
+    .tier-tag {
+      display: inline-block;
+      margin-left: 4px;
+      padding: 1px 5px;
+      border-radius: 3px;
+      background: #fff8e1;
+      color: var(--gold);
+      font-size: 9px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+    .tag-contact { background: var(--ice); color: var(--navy); }
+    .addon-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+    }
+    .addon-item {
+      padding: 7px 10px;
+      border: 1px solid var(--line);
+      border-radius: 5px;
+      background: var(--ice2);
+    }
+    .addon-name {
+      color: var(--navy);
+      font-size: 11px;
+      font-weight: 800;
+      line-height: 1.3;
+    }
+    .addon-price {
+      margin-top: 3px;
+      color: var(--navy);
+      font-size: 14px;
+      font-weight: 900;
+    }
+    .addon-unit { color: var(--muted); font-size: 10px; font-weight: 500; }
+    .addon-free {
+      margin-top: 2px;
+      color: var(--green);
+      font-size: 9.5px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+    .pkg-card {
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-left: 3px solid var(--purple);
+      border-radius: 6px;
+      background: var(--white);
+    }
+    .pkg-card-flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    .pkg-name {
+      color: var(--navy);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .pkg-duration {
+      margin-bottom: 4px;
+      color: var(--muted);
+      font-size: 10.5px;
+    }
+    .pkg-price {
+      color: var(--purple);
+      font-size: 22px;
+      line-height: 1;
+      font-weight: 900;
+    }
+    .pkg-desc {
+      margin-top: 4px;
+      color: var(--steel);
+      font-size: 11px;
+      line-height: 1.4;
+    }
+    .retainer-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    .ret-card {
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      text-align: center;
+      background: var(--purple-light);
+    }
+    .ret-name {
+      color: var(--purple);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .ret-price {
+      margin: 4px 0 2px;
+      color: var(--purple);
+      font-size: 22px;
+      line-height: 1.1;
+      font-weight: 900;
+    }
+    .ret-price small { color: var(--muted); font-size: 13px; font-weight: 500; }
+    .ret-days { color: var(--muted); font-size: 10.5px; }
+    .discount-strip {
+      margin-bottom: 16px;
+      padding: 10px 14px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--ice2);
+    }
+    .discount-label {
+      margin-bottom: 6px;
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .discount-items { display: flex; flex-wrap: wrap; gap: 18px; }
+    .disc-item { color: var(--steel); font-size: 11.5px; }
+    .disc-item strong { color: var(--green); }
+    .founding-strip {
+      margin-bottom: 16px;
+      padding: 16px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      border-radius: 8px;
+      color: var(--white);
+      background: linear-gradient(135deg, var(--navy-dark), var(--navy));
+    }
+    .founding-title {
+      color: var(--gold);
+      font-size: 16px;
+      font-weight: 900;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .founding-sub {
+      margin-top: 3px;
+      color: rgba(255,255,255,0.68);
+      font-size: 11.5px;
+    }
+    .founding-mid { text-align: center; flex-shrink: 0; }
+    .founding-price {
+      color: var(--white);
+      font-size: 38px;
+      line-height: 1;
+      font-weight: 900;
+    }
+    .founding-price small { font-size: 15px; font-weight: 500; opacity: 0.68; }
+    .founding-was {
+      margin-top: 3px;
+      color: rgba(255,255,255,0.48);
+      font-size: 10.5px;
+      text-decoration: line-through;
+    }
+    .founding-perks { display: grid; gap: 4px; }
+    .perk {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: rgba(255,255,255,0.82);
+      font-size: 11px;
+    }
+    .perk-dot {
+      width: 5px;
+      height: 5px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+    .terms-box {
+      padding: 10px 14px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--ice2);
+    }
+    .terms-title {
+      margin-bottom: 6px;
+      color: var(--purple);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .terms-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 6px 18px;
+    }
+    .term-item {
+      position: relative;
+      padding-left: 12px;
+      color: var(--steel);
+      font-size: 11px;
+      line-height: 1.4;
+    }
+    .term-item::before {
+      content: "\2713";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--purple);
+      font-weight: 900;
+    }
+    .doc-footer {
+      padding: 12px 36px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-shrink: 0;
+      color: rgba(255,255,255,0.58);
+      background: var(--navy-dark);
+      border-top: 3px solid var(--gold);
+      font-size: 10.5px;
+    }
+    .doc-footer strong { color: var(--white); }
+    .footer-contact { text-align: right; font-size: 11.5px; }
+    .page-compact .body {
+      padding: 10px 30px 8px;
+    }
+    .page-compact .doc-header {
+      height: 72px;
+      padding-right: 30px;
+    }
+    .page-compact .doc-logo {
+      height: 62px;
+    }
+    .page-compact .tagline {
+      font-size: 13px;
+    }
+    .page-compact .web {
+      font-size: 10px;
+    }
+    .page-compact .section-label {
+      margin-bottom: 6px;
+      font-size: 10px;
+    }
+    .page-compact .pkg-grid {
+      gap: 6px;
+      margin-bottom: 6px;
+    }
+    .page-compact .custom-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 5px;
+    }
+    .page-compact .custom-grid .pkg-card {
+      padding: 5px 7px;
+    }
+    .page-compact .custom-grid .pkg-name {
+      font-size: 9.8px;
+      line-height: 1.1;
+      letter-spacing: 0.025em;
+    }
+    .page-compact .custom-grid .pkg-duration {
+      margin-bottom: 2px;
+      font-size: 8px;
+    }
+    .page-compact .custom-grid .pkg-price {
+      font-size: 14px;
+    }
+    .page-compact .custom-grid .pkg-desc {
+      margin-top: 2px;
+      font-size: 8px;
+      line-height: 1.12;
+    }
+    .page-compact .pkg-card {
+      padding: 6px 8px;
+    }
+    .page-compact .pkg-card-flex {
+      margin-bottom: 8px;
+    }
+    .page-compact .pkg-name {
+      font-size: 11.5px;
+      line-height: 1.15;
+    }
+    .page-compact .pkg-duration,
+    .page-compact .pkg-desc {
+      font-size: 9px;
+      line-height: 1.2;
+    }
+    .page-compact .pkg-price {
+      font-size: 16px;
+    }
+    .page-compact .retainer-row {
+      gap: 7px;
+      margin-bottom: 8px;
+    }
+    .page-compact .ret-card {
+      padding: 6px 8px;
+    }
+    .page-compact .ret-name {
+      font-size: 10px;
+    }
+    .page-compact .ret-price {
+      font-size: 17px;
+      margin: 2px 0 1px;
+    }
+    .page-compact .ret-days {
+      font-size: 9px;
+    }
+    .page-compact .discount-strip {
+      margin-bottom: 8px;
+      padding: 6px 10px;
+    }
+    .page-compact .discount-label,
+    .page-compact .disc-item {
+      font-size: 9px;
+    }
+    .page-compact .founding-strip {
+      margin-bottom: 7px;
+      padding: 8px 14px;
+      gap: 10px;
+    }
+    .page-compact .founding-title {
+      font-size: 13px;
+    }
+    .page-compact .founding-sub,
+    .page-compact .founding-was {
+      font-size: 9px;
+    }
+    .page-compact .founding-price {
+      font-size: 25px;
+    }
+    .page-compact .perk {
+      font-size: 8.6px;
+      line-height: 1.15;
+    }
+    .page-compact .terms-box {
+      padding: 6px 10px;
+    }
+    .page-compact .terms-title {
+      font-size: 9px;
+      margin-bottom: 4px;
+    }
+    .page-compact .terms-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 3px 10px;
+    }
+    .page-compact .term-item {
+      font-size: 8.6px;
+      line-height: 1.15;
+    }
+    .page-compact .doc-footer {
+      padding: 9px 30px;
+      font-size: 9px;
+    }
+    .page-compact .footer-contact {
+      font-size: 10px;
+    }
+    @media screen and (max-width: 840px) {
+      .screen-actions,
+      .page { width: calc(100% - 20px); }
+      .page { height: auto; min-height: 1123px; }
+      .doc-header,
+      .doc-footer,
+      .founding-strip { flex-direction: column; align-items: flex-start; text-align: left; }
+      .header-right,
+      .footer-contact,
+      .founding-mid { text-align: left; }
+      .bundles-grid,
+      .intro-row,
+      .two-col,
+      .pkg-grid,
+      .retainer-row,
+      .addon-grid,
+      .terms-grid { grid-template-columns: 1fr; }
+      .doc-logo { max-width: 100%; height: auto; }
+    }
+    @media print {
+      @page { margin: 0; size: A4 portrait; }
+      html, body {
+        width: 210mm;
+        margin: 0;
+        background: white;
+      }
+      .screen-actions { display: none !important; }
+      .page {
+        width: 210mm !important;
+        height: 297mm !important;
+        min-height: 0 !important;
+        margin: 0 !important;
+        box-shadow: none !important;
+        page-break-after: always;
+        break-after: page;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .page:last-of-type {
+        page-break-after: auto;
+        break-after: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="screen-actions">
+    <a href="product-and-services.html">Back to Products and Services</a>
+    <button type="button" onclick="window.print()">Print Price List</button>
+  </div>
+
+  <section class="page">
+    <header class="doc-header">
+      <img src="assets/wp_precision_logo_dark_mode.png" alt="WP Precision Systems Ltd." class="doc-logo">
+      <div class="header-right">
+        <div class="tagline">Service Pricing Overview</div>
+        <div class="web">wpprecisionsystems.co.uk</div>
+      </div>
+    </header>
+
+    <div class="body">
+      <div class="intro-row">
+        <div class="intro-card">
+          <div class="intro-title">Service Line 1 - Calibration Compliance</div>
+          <div class="intro-desc">Subscription-based software plus managed compliance service. We track instruments, manage vendors and keep teams audit-ready without hiring internal staff.</div>
+        </div>
+        <div class="intro-card consulting">
+          <div class="intro-title">Service Line 2 - Engineering Consulting</div>
+          <div class="intro-desc">Fixed-price project packages and monthly retainers for quality control, test validation, process improvement and manufacturing support.</div>
+        </div>
+        <div class="intro-card process">
+          <div class="intro-title">Service Line 3 - Process Services</div>
+          <div class="intro-desc">Lean, Six Sigma, FMEA, 8D, yield improvement, line optimisation and transfer support for manufacturing teams.</div>
+        </div>
+      </div>
+
+      <div class="section-label">Calibration Compliance - Bundle Packages</div>
+      <div class="bundles-grid">
+        <article class="bundle-card">
+          <div class="bundle-head"><div class="bundle-name">Bundle A</div><div class="bundle-tag">Self-Starter</div></div>
+          <div class="bundle-price-row"><div class="bundle-price">&pound;750<small>/mo</small></div><div class="bundle-saving">Save &pound;130/mo vs separate</div></div>
+          <div class="bundle-body">
+            <div class="bundle-includes">Includes</div>
+            <div class="bundle-item">Professional Tracking System</div>
+            <div class="bundle-item">300 assets, 25 GB, 5-year retention</div>
+            <div class="bundle-item">Standard Compliance Service</div>
+            <div class="bundle-item">Vendor co-ordination</div>
+            <div class="bundle-item">Audit readiness support</div>
+            <div class="bundle-best">Best for: SMEs with internal QC team</div>
+          </div>
+        </article>
+        <article class="bundle-card featured">
+          <div class="bundle-head"><div class="bundle-name">Bundle B</div><div class="bundle-tag">Full Compliance Control</div></div>
+          <div class="bundle-price-row"><div class="bundle-price">&pound;1,150<small>/mo</small></div><div class="bundle-saving">Save &pound;380/mo vs separate</div></div>
+          <div class="bundle-body">
+            <div class="bundle-includes">Includes</div>
+            <div class="bundle-item">Professional Tracking System</div>
+            <div class="bundle-item">300 assets, 25 GB, 5-year retention</div>
+            <div class="bundle-item">Full Control Compliance Service</div>
+            <div class="bundle-item">Monthly compliance check and escalation</div>
+            <div class="bundle-item">ISO-ready audit support and on-site logistics</div>
+            <div class="bundle-bonus">
+              <div class="bundle-bonus-label">Free Bonuses (&pound;700 value)</div>
+              <div class="bundle-bonus-item">Free Onboarding (&pound;350)</div>
+              <div class="bundle-bonus-item">Free Health Check (&pound;350)</div>
+            </div>
+            <div class="bundle-best">Best for: SMEs without internal compliance staff</div>
+          </div>
+        </article>
+        <article class="bundle-card">
+          <div class="bundle-head"><div class="bundle-name">Bundle C</div><div class="bundle-tag">Scale-Up</div></div>
+          <div class="bundle-price-row"><div class="bundle-price">&pound;1,550<small>/mo</small></div><div class="bundle-saving">Save &pound;250/mo vs separate</div></div>
+          <div class="bundle-body">
+            <div class="bundle-includes">Includes</div>
+            <div class="bundle-item">Business Tracking System</div>
+            <div class="bundle-item">750 assets, 75 GB, 7-year retention</div>
+            <div class="bundle-item">OCR certificate search</div>
+            <div class="bundle-item">Full Control Compliance Service</div>
+            <div class="bundle-item">Everything needed to pass audit</div>
+            <div class="bundle-best">Best for: SMEs with 300+ instruments</div>
+          </div>
+        </article>
+      </div>
+
+      <div class="annual-note"><strong>Annual pricing:</strong> Pay 10 months, get 12 and save about 17%. All bundles on 12-month minimum contract. <strong>Enterprise tier:</strong> multi-site operations, contact us for custom pricing.</div>
+
+      <div class="two-col">
+        <div>
+          <div class="section-label" style="margin-bottom:8px;">Software Tiers</div>
+          <table class="tier-table">
+            <thead><tr><th>Tier</th><th>Capacity</th><th>Price/mo</th></tr></thead>
+            <tbody>
+              <tr><td>Starter</td><td>100 assets, 5 GB, 3 yr</td><td>&pound;120</td></tr>
+              <tr class="tier-highlight"><td>Professional <span class="tier-tag">Sweet Spot</span></td><td>300 assets, 25 GB, 5 yr</td><td>&pound;280</td></tr>
+              <tr><td>Business</td><td>750 assets, 75 GB, 7 yr</td><td>&pound;550</td></tr>
+              <tr><td>Enterprise <span class="tier-tag tag-contact">Custom</span></td><td>Unlimited, lifetime</td><td>Contact</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div>
+          <div class="section-label" style="margin-bottom:8px;">Service Tiers</div>
+          <table class="tier-table">
+            <thead><tr><th>Tier</th><th>Ownership</th><th>Price/mo</th></tr></thead>
+            <tbody>
+              <tr><td>Lite</td><td>Customer-led</td><td>&pound;280</td></tr>
+              <tr><td>Standard</td><td>Shared</td><td>&pound;600</td></tr>
+              <tr class="tier-highlight"><td>Full Control <span class="tier-tag">Recommended</span></td><td>We handle everything</td><td>&pound;1,250</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="section-label" style="margin-bottom:10px;">Add-On Services</div>
+      <div class="addon-grid">
+        <div class="addon-item"><div class="addon-name">Onboarding Setup</div><div class="addon-price">&pound;350 <span class="addon-unit">one-off</span></div><div class="addon-free">Free with Bundle B</div></div>
+        <div class="addon-item"><div class="addon-name">Compliance Health Check</div><div class="addon-price">&pound;350 <span class="addon-unit">one-off</span></div><div class="addon-free">Free with Bundle B</div></div>
+        <div class="addon-item"><div class="addon-name">Data Migration / Bulk Upload</div><div class="addon-price">&pound;350 <span class="addon-unit">one-off</span></div></div>
+        <div class="addon-item"><div class="addon-name">Audit Support (on-site)</div><div class="addon-price">&pound;400 <span class="addon-unit">/day</span></div></div>
+        <div class="addon-item"><div class="addon-name">Urgent / Priority Job</div><div class="addon-price">&pound;250 <span class="addon-unit">/request</span></div></div>
+        <div class="addon-item"><div class="addon-name">On-site Pickup (40+ miles)</div><div class="addon-price">&pound;80 <span class="addon-unit">/round trip</span></div></div>
+      </div>
+    </div>
+
+    <footer class="doc-footer">
+      <div>All prices exclude VAT. 12-month minimum on bundles. 30-day money-back guarantee.</div>
+      <div class="footer-contact"><strong>wpprecisionsystems.co.uk</strong> | Page 1 of 2</div>
+    </footer>
+  </section>
+
+  <section class="page page-compact">
+    <header class="doc-header">
+      <img src="assets/wp_precision_logo_dark_mode.png" alt="WP Precision Systems Ltd." class="doc-logo">
+      <div class="header-right">
+        <div class="tagline">Service Pricing Overview</div>
+        <div class="web">wpprecisionsystems.co.uk</div>
+      </div>
+    </header>
+
+    <div class="body">
+      <div class="section-label purple">Engineering Consulting - Fixed-Price Packages</div>
+      <div class="pkg-grid custom-grid">
+        <div class="pkg-card"><div class="pkg-name">Audit Support</div><div class="pkg-duration">1-2 weeks</div><div class="pkg-price">&pound;2,500</div><div class="pkg-desc">ISO 9001/17025 audit prep, gap analysis, mock audit, remediation plan and internal audit report.</div></div>
+        <div class="pkg-card"><div class="pkg-name">QC Assessment</div><div class="pkg-duration">1 week</div><div class="pkg-price">&pound;3,000</div><div class="pkg-desc">QMS gap analysis vs ISO 9001, control plans, CAPA framework and SPC setup guidance.</div></div>
+        <div class="pkg-card"><div class="pkg-name">QC System Setup</div><div class="pkg-duration">2 weeks</div><div class="pkg-price">&pound;3,500</div><div class="pkg-desc">Build formal QC from scratch with SOPs, quality dashboard, templates and team training.</div></div>
+        <div class="pkg-card"><div class="pkg-name">Process Improvement</div><div class="pkg-duration">1 week</div><div class="pkg-price">&pound;2,500</div><div class="pkg-desc">Value stream mapping, waste identification, root cause analysis, future-state design and SOPs.</div></div>
+      </div>
+
+      <div class="pkg-card pkg-card-flex">
+        <div style="flex:1;"><div class="pkg-name">Production Line Optimisation</div><div class="pkg-duration">1-2 weeks, on-site</div><div class="pkg-desc">OEE baseline, bottleneck analysis, line balancing, cycle time reduction, layout optimisation and lean improvement plan.</div></div>
+        <div class="pkg-price" style="flex-shrink:0;">&pound;5,500</div>
+      </div>
+
+      <div class="section-label purple">Custom/Quoted after scoping</div>
+      <div class="pkg-grid">
+        <div class="pkg-card"><div class="pkg-name">IQ/OQ/PQ Validation</div><div class="pkg-duration">2-3 weeks</div><div class="pkg-price">Custom</div><div class="pkg-desc">Previously guided at &pound;3,500-&pound;5,000. Quoted after tester scope and validation requirements.</div></div>
+        <div class="pkg-card"><div class="pkg-name">NPI Test Strategy</div><div class="pkg-duration">3-4 weeks</div><div class="pkg-price">Custom</div><div class="pkg-desc">Quoted after product complexity, DFT review and tester concept requirements.</div></div>
+        <div class="pkg-card"><div class="pkg-name">Test Software Development</div><div class="pkg-duration">3-6 weeks typical</div><div class="pkg-price">Custom</div><div class="pkg-desc">Production test scripts, automation or manual-to-automated migration, quoted after scoping.</div></div>
+        <div class="pkg-card"><div class="pkg-name">Automated Test System Support</div><div class="pkg-duration">1-6 months typical</div><div class="pkg-price">Custom</div><div class="pkg-desc">Specification, build management or bespoke tester build, quoted after scoping.</div></div>
+        <div class="pkg-card"><div class="pkg-name">Yield Improvement</div><div class="pkg-duration">2-3 weeks typical</div><div class="pkg-price">Custom</div><div class="pkg-desc">Declining or stagnant yield investigation, quoted after line/product complexity.</div></div>
+        <div class="pkg-card"><div class="pkg-name">Manufacturing Transfer Support</div><div class="pkg-duration">6-10 weeks typical</div><div class="pkg-price">Custom</div><div class="pkg-desc">Production transfer support, tester replication and validation pack, quoted after scoping.</div></div>
+      </div>
+
+      <div class="section-label purple">Monthly Retainer Options</div>
+      <div class="retainer-row">
+        <div class="ret-card"><div class="ret-name">Advisory</div><div class="ret-price">&pound;1,500<small>/mo</small></div><div class="ret-days">2 days, remote</div></div>
+        <div class="ret-card"><div class="ret-name">Embedded</div><div class="ret-price">&pound;2,200<small>/mo</small></div><div class="ret-days">3 days, on-site + remote</div></div>
+        <div class="ret-card"><div class="ret-name">Strategic</div><div class="ret-price">&pound;3,800<small>/mo</small></div><div class="ret-days">5 days, on-site + multi-site</div></div>
+      </div>
+
+      <div class="discount-strip">
+        <div class="discount-label">Cross-Sell Discount - Bundle Subscribers</div>
+        <div class="discount-items">
+          <div class="disc-item">Bundle A subscriber: <strong>10% off</strong></div>
+          <div class="disc-item">Bundle B / C subscriber: <strong>15% off</strong></div>
+          <div class="disc-item">Founding Customer: <strong>20% off</strong></div>
+          <div class="disc-item">Applied to all packages and retainers</div>
+        </div>
+      </div>
+
+      <div class="section-label">Founding Customer Program - Bundle B Only</div>
+      <div class="founding-strip">
+        <div><div class="founding-title">Founding Customer Program</div><div class="founding-sub">Limited to first 10 clients, 24-month price lock</div></div>
+        <div class="founding-mid"><div class="founding-price">&pound;950<small>/mo</small></div><div class="founding-was">Regular price &pound;1,150/mo</div></div>
+        <div class="founding-perks">
+          <div class="perk"><span class="perk-dot"></span>Price locked for 24 months</div>
+          <div class="perk"><span class="perk-dot"></span>Free Onboarding (&pound;350 value)</div>
+          <div class="perk"><span class="perk-dot"></span>Free Compliance Health Check (&pound;350)</div>
+          <div class="perk"><span class="perk-dot"></span>20% off all consulting packages</div>
+          <div class="perk"><span class="perk-dot"></span>Direct line to founder and quarterly reviews</div>
+        </div>
+      </div>
+
+      <div class="terms-box">
+        <div class="terms-title">Engineering Consulting - Terms and Notes</div>
+        <div class="terms-grid">
+          <div class="term-item">Fixed-price guarantee with agreed scope</div>
+          <div class="term-item">50% deposit, 50% on completion</div>
+          <div class="term-item">100% upfront earns 5% discount</div>
+          <div class="term-item">Statement of Work before start</div>
+          <div class="term-item">Retainer minimum: 3 months rolling</div>
+          <div class="term-item">30-day notice to cancel or downgrade</div>
+          <div class="term-item">Unused retainer days do not roll over</div>
+          <div class="term-item">Pause option: once per year, up to 4 weeks</div>
+          <div class="term-item">Travel within 50 miles included</div>
+          <div class="term-item">Beyond 50 miles: &pound;0.45/mile plus accommodation</div>
+          <div class="term-item">All deliverables in editable format</div>
+          <div class="term-item">NDA available on request</div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="doc-footer">
+      <div>All prices exclude VAT. Bundle subscriber discounts applied automatically.</div>
+      <div class="footer-contact"><strong>wpprecisionsystems.co.uk</strong> | Page 2 of 2</div>
+    </footer>
+  </section>
+</body>
+</html>

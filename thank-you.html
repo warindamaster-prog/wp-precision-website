@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You | WP Precision Systems</title>
+  <meta name="description" content="Thank you for booking a consultation with WP Precision Systems." />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f6f8fb;
+      color: #0A1F44;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 80px 24px;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 48px;
+      box-shadow: 0 20px 50px rgba(10, 31, 68, 0.08);
+      border: 1px solid #e5eaf0;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      margin-bottom: 40px;
+      color: #0A1F44;
+    }
+
+    h1 {
+      font-size: 42px;
+      line-height: 1.15;
+      margin: 0 0 20px;
+      color: #0A1F44;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: #4F5B66;
+      margin-bottom: 22px;
+    }
+
+    .box {
+      background: #f1f5f9;
+      border-left: 5px solid #0A1F44;
+      padding: 24px;
+      border-radius: 12px;
+      margin: 34px 0;
+    }
+
+    .box h2 {
+      font-size: 22px;
+      margin-top: 0;
+      margin-bottom: 14px;
+      color: #0A1F44;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+      color: #4F5B66;
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      padding: 15px 22px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    .btn-primary {
+      background: #0A1F44;
+      color: #ffffff;
+    }
+
+    .btn-secondary {
+      background: #ffffff;
+      color: #0A1F44;
+      border: 1px solid #0A1F44;
+    }
+
+    .footer {
+      margin-top: 36px;
+      font-size: 14px;
+      color: #7b8794;
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        padding: 40px 18px;
+      }
+
+      .card {
+        padding: 30px 22px;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      .buttons {
+        flex-direction: column;
+      }
+
+      .btn {
+        text-align: center;
+      }
+    }
+  
+/* Shared WP Precision Systems header and footer */
+.wp-site-header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.96);border-bottom:1px solid #DDE5EF;backdrop-filter:blur(14px)}
+.wp-header-inner{width:min(1120px,calc(100% - 40px));min-height:96px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.wp-brand{display:flex;align-items:center;min-width:360px;text-decoration:none;color:#0A1F44}
+.wp-logo{display:block;width:min(520px,46vw);height:74px;object-fit:contain;object-position:left center}
+.wp-main-nav{display:flex;align-items:center;justify-content:flex-end;gap:24px;color:#0A1F44;font-size:15px;font-weight:800}
+.wp-main-nav a,.wp-dropdown-toggle{font:inherit;color:#0A1F44;text-decoration:none;background:transparent;border:0;padding:10px 0;cursor:pointer;white-space:nowrap}
+.wp-main-nav a:hover,.wp-dropdown:hover .wp-dropdown-toggle,.wp-dropdown:focus-within .wp-dropdown-toggle{color:#0A1F44}
+.wp-dropdown{position:relative}
+.wp-dropdown-toggle:after{content:"";display:inline-block;margin-left:8px;border-left:4px solid transparent;border-right:4px solid transparent;border-top:5px solid currentColor;vertical-align:middle}
+.wp-dropdown-menu{position:absolute;top:100%;left:0;min-width:320px;padding:10px;background:#fff;border:1px solid #DDE5EF;border-radius:8px;box-shadow:0 18px 42px rgba(10,31,68,.13);opacity:0;visibility:hidden;transform:translateY(8px);transition:.16s ease}
+.wp-dropdown:hover .wp-dropdown-menu,.wp-dropdown:focus-within .wp-dropdown-menu{opacity:1;visibility:visible;transform:translateY(0)}
+.wp-dropdown-menu a{display:block;padding:10px 12px;border-radius:6px;color:#0A1F44;line-height:1.35;white-space:normal}
+.wp-dropdown-menu a:hover{background:#F5F7FA}
+.wp-site-footer{border-top:1px solid #DDE5EF;padding:20px 0;color:#667891;font-size:14px;line-height:1.55;background:#fff}
+.wp-footer-inner{width:min(1120px,calc(100% - 40px));margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.wp-footer-left strong{color:#667891;font-weight:800}
+.wp-site-footer a{color:#0000EE;text-decoration:none}
+.wp-site-footer a:hover{text-decoration:underline}
+.wp-footer-right{text-align:left}
+@media(max-width:900px){.wp-header-inner{align-items:flex-start;flex-direction:column;padding:14px 0}.wp-brand{min-width:0}.wp-logo{width:min(390px,90vw);height:58px}.wp-main-nav{align-items:flex-start;flex-wrap:wrap;gap:10px 18px}.wp-dropdown-menu{left:0;right:auto}.wp-footer-inner{grid-template-columns:1fr}}
+  </style>
+</head>
+
+<body>
+<header class="wp-site-header">
+  <div class="wp-header-inner">
+    <a class="wp-brand" href="index.html" aria-label="WP Precision Systems home">
+      <img class="wp-logo" src="wp-logo.png" alt="WP Precision Systems">
+    </a>
+    <nav class="wp-main-nav" aria-label="Main navigation">
+      <div class="wp-dropdown">
+        <button class="wp-dropdown-toggle" type="button" aria-haspopup="true">Company</button>
+        <div class="wp-dropdown-menu">
+          <a href="About_us.html">About Us</a>
+          <a href="Pricing_two_pager.html">Brochure</a>
+        </div>
+      </div>
+      <div class="wp-dropdown wp-dropdown-primary">
+        <button class="wp-dropdown-toggle" type="button" aria-haspopup="true">What We Do</button>
+        <div class="wp-dropdown-menu">
+          <a href="calibration-tracking-system.html">Calibration Tracking System</a>
+          <a href="calibration-management-and-compliance-service.html">Calibration management and Compliance Service</a>
+          <a href="engineering-consulting.html">Manufacturing Consulting and Engineering Service</a>
+        </div>
+      </div>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </div>
+</header><main class="container">
+    <section class="card">
+
+      <h1>Thank You &mdash; Your Consultation Is Booked</h1>
+
+      <p>
+        Thank you for booking a consultation with WP Precision Systems.
+        We&rsquo;ll review your calibration process, asset tracking, certificate control,
+        and audit readiness during the call.
+      </p>
+
+      <p>
+        The goal is to understand your current process and recommend the right level
+        of support for your business.
+      </p>
+
+      <div class="box">
+        <h2>Before the call, please prepare:</h2>
+        <ul>
+          <li>Your current asset list, if available</li>
+          <li>Calibration due dates or current tracking spreadsheet</li>
+          <li>Sample calibration certificates</li>
+          <li>Any audit concerns or supplier issues</li>
+          <li>Any missed or overdue calibration records</li>
+        </ul>
+      </div>
+
+      <p>
+        If you have any documents to share before the meeting, please email them to:
+        <br />
+        <strong>contact@wpprecisionsystems.co.uk</strong>
+      </p>
+
+      <div class="buttons">
+        <a class="btn btn-primary" href="mailto:contact@wpprecisionsystems.co.uk?subject=Calibration%20Review%20Documents">
+          Email Documents
+        </a>
+
+        <a class="btn btn-secondary" href="https://wpprecisionsystems.co.uk/">
+          Return to Homepage
+        </a>
+      </div>
+
+      <div class="footer">
+        WP Precision Systems &mdash; Calibration Control, Compliance Support & Engineering Systems
+      </div>
+    </section>
+  </main><footer class="wp-site-footer">
+  <div class="wp-footer-inner">
+    <div class="wp-footer-left">
+      <strong>WP Precision Systems Ltd.</strong><br>
+      5 Brayford Square, London, England, E1 0SG<br>
+      United Kingdom<br>
+      email: <a href="mailto:contact@wpprecisionsystems.co.uk">contact@wpprecisionsystems.co.uk</a><br>Engineering Systems &amp; Compliance Solutions for Modern Manufacturing
+    </div>
+    <div class="wp-footer-right">
+      &copy; 2026 WP Precision Systems. All rights reserved<br>Registered in England &amp; Wales<br>Company No: 17183797<br>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

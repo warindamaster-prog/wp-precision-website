@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You | Book a Demo | WP Precision Systems</title>
+  <meta name="description" content="Thank you for booking a demo with WP Precision Systems. Prepare your asset list, calibration records and audit concerns before the call." />
+  <style>
+    :root {
+      --navy: #0A1F44;
+      --grey: #4F5B66;
+      --light: #F6F8FB;
+      --border: #E5EAF0;
+      --white: #FFFFFF;
+      --accent: #1F4E79;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, #F6F8FB 0%, #FFFFFF 100%);
+      color: var(--navy);
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 56px 20px;
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: 980px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+      font-weight: 800;
+      letter-spacing: 0.4px;
+      color: var(--navy);
+    }
+
+    .mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: var(--navy);
+      color: var(--white);
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      font-size: 15px;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      box-shadow: 0 24px 70px rgba(10, 31, 68, 0.10);
+      overflow: hidden;
+    }
+
+    .hero {
+      padding: 52px 52px 36px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: #EEF4FA;
+      color: var(--accent);
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 760px;
+      font-size: 46px;
+      line-height: 1.1;
+      letter-spacing: -1.2px;
+      color: var(--navy);
+    }
+
+    .intro {
+      max-width: 760px;
+      margin: 20px 0 0;
+      font-size: 19px;
+      line-height: 1.7;
+      color: var(--grey);
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 28px;
+      padding: 36px 52px 52px;
+    }
+
+    .panel {
+      background: #F8FAFC;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 28px;
+    }
+
+    h2 {
+      margin: 0 0 16px;
+      font-size: 23px;
+      line-height: 1.25;
+      color: var(--navy);
+    }
+
+    p {
+      margin: 0 0 18px;
+      color: var(--grey);
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 10px 0;
+      color: var(--grey);
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .tick {
+      flex: 0 0 22px;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: var(--white);
+      display: grid;
+      place-items: center;
+      font-size: 13px;
+      font-weight: 800;
+      margin-top: 1px;
+    }
+
+    .email-box {
+      margin-top: 18px;
+      padding: 18px;
+      border-radius: 14px;
+      background: var(--white);
+      border: 1px solid var(--border);
+    }
+
+    .email-box strong {
+      color: var(--navy);
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 14px 18px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 800;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 22px rgba(10, 31, 68, 0.14);
+    }
+
+    .btn-primary {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .btn-secondary {
+      background: var(--white);
+      color: var(--navy);
+      border: 1px solid var(--navy);
+    }
+
+    .next-steps {
+      counter-reset: step;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 36px 1fr;
+      gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .step:last-child {
+      border-bottom: 0;
+    }
+
+    .num {
+      width: 36px;
+      height: 36px;
+      border-radius: 11px;
+      background: var(--navy);
+      color: var(--white);
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+    }
+
+    .step-title {
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+
+    .step-text {
+      color: var(--grey);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .footer {
+      margin-top: 22px;
+      text-align: center;
+      color: #7B8794;
+      font-size: 14px;
+    }
+
+    @media (max-width: 820px) {
+      .hero,
+      .content {
+        padding-left: 28px;
+        padding-right: 28px;
+      }
+
+      h1 {
+        font-size: 36px;
+      }
+
+      .content {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .page {
+        padding: 32px 14px;
+      }
+
+      .hero,
+      .content {
+        padding: 26px 20px;
+      }
+
+      h1 {
+        font-size: 31px;
+      }
+
+      .intro {
+        font-size: 16px;
+      }
+
+      .actions {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+  
+/* Shared WP Precision Systems header and footer */
+.wp-site-header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.96);border-bottom:1px solid #DDE5EF;backdrop-filter:blur(14px)}
+.wp-header-inner{width:min(1120px,calc(100% - 40px));min-height:96px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.wp-brand{display:flex;align-items:center;min-width:360px;text-decoration:none;color:#0A1F44}
+.wp-logo{display:block;width:min(520px,46vw);height:74px;object-fit:contain;object-position:left center}
+.wp-main-nav{display:flex;align-items:center;justify-content:flex-end;gap:24px;color:#0A1F44;font-size:15px;font-weight:800}
+.wp-main-nav a,.wp-dropdown-toggle{font:inherit;color:#0A1F44;text-decoration:none;background:transparent;border:0;padding:10px 0;cursor:pointer;white-space:nowrap}
+.wp-main-nav a:hover,.wp-dropdown:hover .wp-dropdown-toggle,.wp-dropdown:focus-within .wp-dropdown-toggle{color:#0A1F44}
+.wp-dropdown{position:relative}
+.wp-dropdown-toggle:after{content:"";display:inline-block;margin-left:8px;border-left:4px solid transparent;border-right:4px solid transparent;border-top:5px solid currentColor;vertical-align:middle}
+.wp-dropdown-menu{position:absolute;top:100%;left:0;min-width:320px;padding:10px;background:#fff;border:1px solid #DDE5EF;border-radius:8px;box-shadow:0 18px 42px rgba(10,31,68,.13);opacity:0;visibility:hidden;transform:translateY(8px);transition:.16s ease}
+.wp-dropdown:hover .wp-dropdown-menu,.wp-dropdown:focus-within .wp-dropdown-menu{opacity:1;visibility:visible;transform:translateY(0)}
+.wp-dropdown-menu a{display:block;padding:10px 12px;border-radius:6px;color:#0A1F44;line-height:1.35;white-space:normal}
+.wp-dropdown-menu a:hover{background:#F5F7FA}
+.wp-site-footer{border-top:1px solid #DDE5EF;padding:20px 0;color:#667891;font-size:14px;line-height:1.55;background:#fff}
+.wp-footer-inner{width:min(1120px,calc(100% - 40px));margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.wp-footer-left strong{color:#667891;font-weight:800}
+.wp-site-footer a{color:#0000EE;text-decoration:none}
+.wp-site-footer a:hover{text-decoration:underline}
+.wp-footer-right{text-align:left}
+@media(max-width:900px){.wp-header-inner{align-items:flex-start;flex-direction:column;padding:14px 0}.wp-brand{min-width:0}.wp-logo{width:min(390px,90vw);height:58px}.wp-main-nav{align-items:flex-start;flex-wrap:wrap;gap:10px 18px}.wp-dropdown-menu{left:0;right:auto}.wp-footer-inner{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<header class="wp-site-header">
+  <div class="wp-header-inner">
+    <a class="wp-brand" href="index.html" aria-label="WP Precision Systems home">
+      <img class="wp-logo" src="wp-logo.png" alt="WP Precision Systems">
+    </a>
+    <nav class="wp-main-nav" aria-label="Main navigation">
+      <div class="wp-dropdown">
+        <button class="wp-dropdown-toggle" type="button" aria-haspopup="true">Company</button>
+        <div class="wp-dropdown-menu">
+          <a href="About_us.html">About Us</a>
+          <a href="Pricing_two_pager.html">Brochure</a>
+        </div>
+      </div>
+      <div class="wp-dropdown wp-dropdown-primary">
+        <button class="wp-dropdown-toggle" type="button" aria-haspopup="true">What We Do</button>
+        <div class="wp-dropdown-menu">
+          <a href="calibration-tracking-system.html">Calibration Tracking System</a>
+          <a href="calibration-management-and-compliance-service.html">Calibration management and Compliance Service</a>
+          <a href="engineering-consulting.html">Manufacturing Consulting and Engineering Service</a>
+        </div>
+      </div>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </div>
+</header><main class="page">
+    <div class="wrap">
+
+      <section class="card">
+        <div class="hero">
+          <div class="label">&#10003; Demo booked successfully</div>
+          <h1>Thank You &mdash; Your Calibration Tracking System Demo Is Booked</h1>
+          <p class="intro">
+            Thank you for booking a demo with WP Precision Systems. During the call, we&rsquo;ll review your calibration process, asset tracking, certificate control, and audit readiness.
+          </p>
+        </div>
+
+        <div class="content">
+          <div class="panel">
+            <h2>Before the demo, please prepare:</h2>
+            <ul>
+              <li><span class="tick">&#10003;</span><span>Your current asset list, if available</span></li>
+              <li><span class="tick">&#10003;</span><span>Calibration due dates or your current tracking spreadsheet</span></li>
+              <li><span class="tick">&#10003;</span><span>Sample calibration certificates</span></li>
+              <li><span class="tick">&#10003;</span><span>Any audit concerns, overdue items, or supplier issues</span></li>
+              <li><span class="tick">&#10003;</span><span>Any process gaps you want to fix or control better</span></li>
+            </ul>
+
+            <div class="email-box">
+              <p>
+                If you have documents to share before the meeting, please email them to:<br />
+                <strong>contact@wpprecisionsystems.co.uk</strong>
+              </p>
+            </div>
+
+            <div class="actions">
+              <a class="btn btn-primary" href="mailto:contact@wpprecisionsystems.co.uk?subject=Calibration%20Demo%20Documents">Email Documents</a>
+              <a class="btn btn-secondary" href="https://wpprecisionsystems.co.uk/">Return to Homepage</a>
+            </div>
+          </div>
+
+          <div class="panel next-steps">
+            <h2>What happens next?</h2>
+
+            <div class="step">
+              <div class="num">1</div>
+              <div>
+                <div class="step-title">Process review</div>
+                <div class="step-text">We&rsquo;ll understand how you currently track assets, due dates, certificates, vendors, and audit evidence.</div>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="num">2</div>
+              <div>
+                <div class="step-title">Gap identification</div>
+                <div class="step-text">We&rsquo;ll identify missed calibration risk, certificate control gaps, spreadsheet issues, and audit-readiness problems.</div>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="num">3</div>
+              <div>
+                <div class="step-title">Recommended support level</div>
+                <div class="step-text">We&rsquo;ll recommend whether Essential Control, Compliance Control, or Full Ownership is the right fit.</div>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="num">4</div>
+              <div>
+                <div class="step-title">Quote and next step</div>
+                <div class="step-text">If there is a good fit, we&rsquo;ll prepare a clear proposal and onboarding plan after the call.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="footer">
+        WP Precision Systems &mdash; Calibration Control, Compliance Support & Engineering Systems
+      </div>
+    </div>
+  </main><footer class="wp-site-footer">
+  <div class="wp-footer-inner">
+    <div class="wp-footer-left">
+      <strong>WP Precision Systems Ltd.</strong><br>
+      5 Brayford Square, London, England, E1 0SG<br>
+      United Kingdom<br>
+      email: <a href="mailto:contact@wpprecisionsystems.co.uk">contact@wpprecisionsystems.co.uk</a><br>Engineering Systems &amp; Compliance Solutions for Modern Manufacturing
+    </div>
+    <div class="wp-footer-right">
+      &copy; 2026 WP Precision Systems. All rights reserved<br>Registered in England &amp; Wales<br>Company No: 17183797<br>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
