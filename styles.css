@@ -176,7 +176,7 @@ img {
 }
 
 .hero {
-  min-height: clamp(460px, 68vh, 620px);
+  min-height: clamp(420px, 62vh, 560px);
   display: flex;
   align-items: center;
   position: relative;
@@ -204,7 +204,7 @@ img {
 .hero-content {
   position: relative;
   z-index: 1;
-  padding: 52px 0 82px;
+  padding: 42px 0 62px;
 }
 
 .eyebrow {
