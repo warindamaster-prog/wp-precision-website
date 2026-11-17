@@ -1,0 +1,28 @@
+/* Shared footer membership badge; original artwork is not altered. */
+.footer-chamber-membership {
+  box-sizing:border-box;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:flex-start;
+  gap:12px;
+  flex-basis:100%;
+  width:min(1180px, calc(100% - 32px));
+  margin:24px auto 0;
+  padding:16px 0 0;
+  border-top:1px solid currentColor;
+  color:inherit;
+  font:inherit;
+  text-align:left;
+}
+.footer-chamber-membership img {
+  display:block;
+  width:auto;
+  height:48px;
+  max-height:48px;
+  max-width:100%;
+  object-fit:contain;
+  flex-shrink:0;
+}
+.footer-chamber-membership span {font-size:14px;line-height:1.5;overflow-wrap:anywhere;}
+.doc-footer {flex-wrap:wrap;}

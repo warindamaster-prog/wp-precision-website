@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.wpprecisionsystems.co.uk/sitemap.xml
