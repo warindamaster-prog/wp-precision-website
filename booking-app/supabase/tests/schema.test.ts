@@ -117,3 +117,52 @@ describe("RLS", () => {
     await expect(as(A, "a@x.com", () => db.query(`insert into storage.objects(bucket_id,name) values('logos','nope/z.png')`))).rejects.toThrow(/row-level security/);
   });
 });
+
+describe("set_working_hours / set_staff_services", () => {
+  const S = "00000000-0000-0000-0000-00000000000c";
+  let staffS: string;
+  const hours = (rows: [number, number, number][]) =>
+    JSON.stringify(rows.map(([weekday, start, end]) => ({ weekday, start, end })));
+  const setHours = (uid: string, email: string, staff: string, rows: [number, number, number][]) =>
+    as(uid, email, () => db.query(`select public.set_working_hours($1, $2::jsonb)`, [staff, hours(rows)]));
+  const count = async (staff: string) =>
+    (await db.query<{ n: number }>(`select count(*)::int n from working_hours where staff_id=$1`, [staff])).rows[0].n;
+
+  beforeAll(async () => {
+    await db.exec(`insert into auth.users values ('${S}','s@x.com')`);
+    staffS = (await db.query<{ id: string }>(
+      `insert into staff(business_id,user_id,name) values($1,$2,'Sam') returning id`, [bizA, S])).rows[0].id;
+    await db.query(`insert into business_members(business_id,user_id,role) values($1,$2,'staff')`, [bizA, S]);
+  });
+
+  it("replaces the weekly hours in one go", async () => {
+    await setHours(A, "a@x.com", staffA, [[1, 540, 1020], [2, 540, 1020]]);
+    expect(await count(staffA)).toBe(2);
+    await setHours(A, "a@x.com", staffA, [[3, 600, 900]]);
+    expect(await count(staffA)).toBe(1);
+  });
+  it("keeps the old hours if the new set is invalid (atomic)", async () => {
+    await expect(setHours(A, "a@x.com", staffA, [[4, 540, 720], [4, 700, 900]])).rejects.toThrow(/no_overlap/);
+    expect(await count(staffA)).toBe(1);
+  });
+  it("lets a staff member edit only their own hours", async () => {
+    await setHours(S, "s@x.com", staffS, [[1, 540, 1020]]);
+    expect(await count(staffS)).toBe(1);
+    await expect(setHours(S, "s@x.com", staffA, [[1, 0, 60]])).rejects.toThrow(/row-level security/);
+    expect(await count(staffA)).toBe(1);
+  });
+  it("cannot touch another business's staff", async () => {
+    await expect(setHours(B, "b@x.com", staffA, [[1, 540, 600]])).rejects.toThrow(/not found/);
+  });
+  it("assigns services, and blocks services from another business", async () => {
+    await as(A, "a@x.com", () => db.query(`select public.set_staff_services($1, array[$2]::uuid[])`, [staffA, svc]));
+    expect((await db.query(`select 1 from staff_services where staff_id=$1`, [staffA])).rows).toHaveLength(1);
+    await db.query(`insert into services(business_id,name,duration_minutes) values($1,'Other',30)`, [bizB]);
+    const foreign = (await db.query<{ id: string }>(`select id from services where business_id=$1`, [bizB])).rows[0].id;
+    await expect(as(A, "a@x.com", () => db.query(`select public.set_staff_services($1, array[$2]::uuid[])`, [staffA, foreign]))).rejects.toThrow(/foreign key/);
+    expect((await db.query(`select 1 from staff_services where staff_id=$1`, [staffA])).rows).toHaveLength(1);
+  });
+  it("only the owner can assign services", async () => {
+    await expect(as(S, "s@x.com", () => db.query(`select public.set_staff_services($1, array[$2]::uuid[])`, [staffS, svc]))).rejects.toThrow(/row-level security/);
+  });
+});

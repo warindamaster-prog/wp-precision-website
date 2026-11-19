@@ -3,6 +3,7 @@ import { z } from "zod";
 
 export type FormState = {
   error?: string;
+  message?: string; // success feedback
   fieldErrors?: Record<string, string[] | undefined>;
   values?: Record<string, string>;
 };

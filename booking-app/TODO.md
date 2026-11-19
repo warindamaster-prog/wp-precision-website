@@ -7,4 +7,6 @@
 - Customer accounts and booking history
 - Marketing email campaigns (consent is stored; sending is not built)
 - Business settings page for logo replacement, slug change, opening-hours overrides
-- Staff invite flow UI (schema supports staff logins; invites come with the staff step)
+- Staff login invites (schema, RLS and the staff dashboard view are built; the invite email and set-password flow are not)
+- Deleting services and staff (they can be hidden or set to not take bookings; deletion is blocked by history)
+- Partial-day time off (days off are whole days in UK time)

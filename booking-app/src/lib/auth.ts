@@ -22,3 +22,10 @@ export async function requireBusiness() {
   if (!member || !business) redirect("/onboarding");
   return { supabase, user, role: member.role as "owner" | "staff", business };
 }
+
+/** Owner-only pages and actions. Staff members get sent back to the dashboard. */
+export async function requireOwner() {
+  const ctx = await requireBusiness();
+  if (ctx.role !== "owner") redirect("/dashboard");
+  return ctx;
+}
